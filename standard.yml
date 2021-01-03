@@ -1,0 +1,8 @@
+name: standard-enforcer
+on: [push, pull_request]
+jobs:
+  enforce-standard-js:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: node .github/workflows/test.js
